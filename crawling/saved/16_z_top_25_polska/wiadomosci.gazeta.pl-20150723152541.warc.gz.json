@@ -1,0 +1,189 @@
+[
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "UL", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 7 ],
+               [ "DIV", 0 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI"
+            ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "DIV", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 8 ],
+               [ "DIV", 0 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "DIV", "DIV", "DIV", "DIV", "DIV" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 2 ],
+               [ "DIV", 1 ],
+               [ "DIV", 7 ],
+               [ "DIV", 0 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723152405/http://wiadomosci.gazeta.pl/wiadomosci/0,0.html"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "DIV", "DIV" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 1 ],
+               [ "DIV", 11 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723152440/http://wiadomosci.gazeta.pl/wiadomosci/1,114871,18407945,pogoda-nie-odpuszcza-wracaja-gwaltowne-burze-i-upal.html#TRNajCzytSST"
+   },
+   {
+      "data" : {
+         "skip" : true
+      },
+      "url" : "http://localhost:8090/replay/20150723152502/http://wiadomosci.gazeta.pl/wiadomosci/0,114881.html#TRNavSST"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "UL", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI"
+            ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723152518/http://wiadomosci.gazeta.pl/wiadomosci/0,114885.html#TRNavSST"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "DIV" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723152529/http://wiadomosci.gazeta.pl/wiadomosci/1,114885,17231481,NASA_zacheca_do_odwiedzania_planet_pozaslonecznych.html"
+   }
+]

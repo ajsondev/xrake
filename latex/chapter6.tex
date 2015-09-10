@@ -1,0 +1,142 @@
+\chapter{Eksperymenty}
+\label{cha:eksperymenty}
+Bardzo wa¿nym etapem jest dostrojenie wybranych algorytmów i danych trenuj¹cych tak, aby uzyskaæ jak najwy¿sz¹ jakoœæ klasyfikacji. W tym celu nale¿y dobraæ odpowiednie atrybuty oraz oceniæ metryki jakoœci klasyfikacji dla ró¿nych parametrów implementacyjnych.
+
+Du¿e znaczenie ma tak¿e zbiór danych testowych, nie mo¿e byæ on zbyt ma³y i powinien odzwierciedlaæ realne dane. Jako próbek trenuj¹cych i testowych u¿y³em zbioru 250 rêcznie oznaczonych list oraz 5200 losowych elementów zebranych z 16 spoœród 25 najpopularniejszych w Polsce witryn wed³ug rankingu Alexa \cite{AlexaRank} w czerwcu 2015 roku. Przy konstrukcji jednego z histogramów zastosowa³em wiêksz¹ liczbê 13000 próbek losowych.
+
+\section{Dobór atrybutów}
+W tej sekcji przedstawiam analizê atrybutów zaimplementowanych w ramach niniejszej pracy.
+
+Jako pierwsze zosta³y przetestowane wartoœci po³o¿enia i rozmiaru obiektów. Jak pokazuje rysunek \ref{fig:wh_xy} korelacja tych atrybutów z klas¹ próbki wystêpuje, lecz jest zbyt ma³a by byæ u¿yteczn¹ w praktyce. Na ¿ó³to oznaczono pola odpowiadaj¹ce wiêkszej liczbie elementów, na czerwono te mniejszej liczbie, a na szaro brak elementów.
+%W praktyce ten atrybut
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{imgs/heat.png}
+	\includegraphics[width=10cm]{imgs/wh_xy_50_50_class_250.png}
+	\includegraphics[width=10cm]{imgs/wh_xy_50_50_rand_13k.png}
+	\caption{Dwuwymiarowe histogramy atrybutów rozmiaru i po³o¿enia dla 230 próbek list oraz 13000 próbek losowych.}
+	\label{fig:wh_xy}
+\end{figure}
+
+Nastêpnie przeanalizowa³em kolory tekstu. Na rysunku \ref{fig:text_color} mo¿na zaobserwowaæ ca³kowity brak korelacji.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{imgs/hist_text_grayscale_230.png}
+	\includegraphics[width=12cm]{imgs/hist_text_grayscale_5200.png}
+	\medskip
+	\caption{Wykresy rozk³adów koloru tekstu.}
+	\label{fig:text_color}
+\end{figure}
+
+Podobnie ma³o przydatny jak poprzedni atrybut okaza³ siê rozmiar tekstu. Rysunek \ref{fig:text_size} przedstawia te rozk³ady zsumowane dla wszystkich branych pod uwagê próbek. Sprawdzi³em równie¿ rozk³ady znormalizowane, zliczaj¹ce udzia³ procentowy znaków, a nie ich liczbê, lecz histogramy by³y bardzo podobne.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{imgs/hist_text_size_230.png}
+	\includegraphics[width=12cm]{imgs/hist_text_size_5200.png}
+	\medskip
+	\caption{Wykresy rozk³adów wielkoœci tekstu.}
+	\label{fig:text_size}
+\end{figure}
+
+Najbardziej obiecuj¹cym okaza³ siê atrybut wewnêtrznego podobieñstwa struktury. Rysunek \ref{fig:pqgram} pokazuje bardzo istotn¹ korelacjê, dla list wartoœci s¹ bliskie zeru, co oznacza du¿e podobieñstwo, natomiast dla próbek losowych najczêœciej pojawia siê wartoœæ jeden, odzwierciedlaj¹ca brak podobieñstwa.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{imgs/hist_pq_gram_class_230.png}
+	\includegraphics[width=12cm]{imgs/hist_pq_gram_rand_5200.png}
+	\medskip
+	\caption{Wykresy wewnêtrznego podobieñstwa struktury.}
+	\label{fig:pqgram}
+\end{figure}
+
+Przeanalizowa³em tak¿e œredni¹ liczbê s³ów wœród bezpoœrednich elementów potomnych (dzieci) obiektu. Na wykresach z rysunku \ref{fig:wpc} widaæ pewn¹ zale¿noœæ. Losowe elementy maj¹ najczêœciej od zera do czterech s³ów na dziecko, a listy od trzech do trzydziestu. Zatem wiêksze wartoœci tego atrybutu s¹ dobrym predyktorem wystêpowania listy.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{imgs/hist_word_count_230.png}
+	\includegraphics[width=12cm]{imgs/hist_word_count_5200.png}
+	\medskip
+	\caption{Wykresy œredniej liczby s³ów wœród elementów potomnych.}
+	\label{fig:wpc}
+\end{figure}
+
+Zaskakuj¹co dobrym atrybutem jest minimalna wariancja rozmiaru i po³o¿enia. Wartoœci dla zbioru list oraz przypadkowych elementów s¹ porównane na rysunku \ref{fig:cvar_min}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{imgs/hist_children_var_min_xywh_230.png}
+	\includegraphics[width=12cm]{imgs/hist_children_var_min_xywh_5200.png}
+	\medskip
+	\caption{Wykresy minimalnej wariancji rozmiaru i po³o¿enia.}
+	\label{fig:cvar_min}
+\end{figure}
+
+\FloatBarrier
+\section{Wyniki}
+\label{sec:Wyniki}
+Ten podrozdzia³ prezentuje skutecznoœæ klasyfikacji, wed³ug kryteriów z podrozdzia³u \ref{sec:kryteria_oceny}, dla ró¿nej konfiguracji parametrów i atrybutów. Ostatecznie jako atrybuty zastosowano: pq-Gram, œredni¹ liczbê s³ów wœród elementów potomnych oraz minimaln¹ wariancjê rozmiaru i po³o¿enia.
+
+Jako funkcji j¹drowej klasyfikatora SVM u¿yto RBF, natomiast Naiwny Klasyfikator Bayesa stosuje rozk³ad Gaussa. Przetestowano równie¿ funkcjê sigmoidaln¹ dla SVM oraz rozk³ady Bernoulliego i wielomianowy, jednak uzyskane wyniki by³y znacz¹co ni¿sze, dlatego zdecydowa³em siê ich nie przedstawiaæ.
+
+Rezultaty walidacji krzy¿owej dla zbioru 250 próbek list oraz 250 próbek negatywnych (nie bêd¹cych listami) pokazuje tabela \ref{tab:main_table}. Wad¹ takiego sposobu oceny jest stosowanie takich samych proporcji próbek obu klas do uczenia i ewaluacji. Jest to niepo¿¹dane, poniewa¿ w rzeczywistoœci wystêpuje du¿a dysproporcja pomiêdzy przyk³adami pozytywnymi i negatywnymi.
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.2} % for the vertical padding
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Walidacja krzy¿owa k-krotna & \multicolumn{2}{c|}{k = 2}                                  & \multicolumn{2}{c|}{k = 10}                                 \\ \hline
+                            & \multicolumn{1}{l|}{SVM} & \multicolumn{1}{l|}{Naive Bayes} & \multicolumn{1}{l|}{SVM} & \multicolumn{1}{l|}{Naive Bayes} \\ \hline
+Dok³adnoœæ [\%]             & 89                     & 90                             & 86                     & 90                             \\ \hline
+Czu³oœæ    [\%]             & 98                     & 93                             & 98                     & 90                             \\ \hline
+Precyzja   [\%]             & 79                     & 87                             & 76                     & 88                             \\ \hline
+$F_2$      [\%]             & 94                     & 91                             & 93                     & 90                             \\ \hline
+\end{tabular}
+\caption{Wyniki walidacji krzy¿owej.}
+\label{tab:main_table}
+\end{table}
+
+Aby uzyskaæ wyniki bli¿sze rzeczywistej skutecznoœci klasyfikatorów u¿y³em ró¿nych podzbiorów grupy testowej do trenowania i ewaluacji. Jednoczeœnie przetestowa³em wp³yw proporcji próbek pozytywnych i negatywnych podczas uczenia na skutecznoœæ klasyfikacji. Widaæ, ¿e proporcja ta~okreœla kompromis pomiêdzy czu³oœci¹, a precyzj¹. Zale¿noœæ przedstawiono w tabeli \ref{tab:main_table_real}. Wartoœci parametrów oceniaj¹cych obliczono dla 250 próbek pozytywnych i 5200 próbek negatywnych, co odzwierciedla ma³y odsetek list wœród wszystkich elementów realnych stron, w zbiorze testowym wynosi³ on oko³o 0,03\%.
+\begin{table}[h]
+\centering
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Próbki grupy trenuj¹cej,\\ X pozytywnych + Y negatywnych\end{tabular}}} & \multicolumn{2}{c|}{SVM} & \multicolumn{2}{c|}{Naive Bayes} \\ \cline{2-5} 
+\multicolumn{1}{|c|}{}                                 & Czu³oœæ [\%]    & Precyzja [\%]  & Czu³oœæ [\%]       & Precyzja [\%]       \\ \hline
+125 + 1716                                              & 52         & 40           & 85              & 35             \\ \hline
+125 + 125                                               & 96         & 20           & 89              & 29             \\ \hline
+125 + 0                                                 & 100        & 4           & 100              & 4               \\ \hline
+\end{tabular}
+}
+\caption{Ocena klasyfikacji trenowanej z ró¿nym udzia³em próbek negatywnych, wyliczona dla 250 próbek pozytywnych i 5200 próbek negatywnych.}
+\label{tab:main_table_real}
+\end{table}
+}
+
+\setlength{\tabcolsep}{1em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.5} % for the vertical padding
+\begin{table}[h]
+\centering
+\begin{tabular}{lc|c|c|}
+\cline{3-4}
+                                                     &                                             & \multicolumn{2}{c|}{$F_2$ [\%]}  \\ \cline{3-4} 
+                                                     & \multicolumn{1}{l|}{}                       & SVM      & Naive Bayes     \\ \hline
+\multicolumn{1}{|l|}{\multirow{3}{*}{Jeden atrybut}} & \multicolumn{1}{l|}{a) pq-Gram}             & 89       & 85             \\ \cline{2-4} 
+\multicolumn{1}{|l|}{}                               & \multicolumn{1}{l|}{b) œrednia s³ów}        & 85       & 78             \\ \cline{2-4} 
+\multicolumn{1}{|l|}{}                               & \multicolumn{1}{l|}{c) minimalna wariancja} & 88       & 89             \\ \hline
+\multicolumn{1}{|c|}{\multirow{3}{*}{Dwa atrybuty}}  & a) + b)                                     & 91       & 85             \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                               & a) + c)                                     & 88       & 88              \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                               & b) + c)                                     & 89       & 89              \\ \hline
+\multicolumn{1}{|l|}{Trzy atrybuty}                  & a) + b) + c)                                & 93       & 90             \\ \hline
+\end{tabular}
+\caption{Wyniki walidacji krzy¿owej 10-krotnej w zale¿noœci od zastosowanych atrybutów.}
+\label{tab:adding_atributes}
+\end{table}
+}
+W tabeli \ref{tab:adding_atributes} pokazujê, ¿e stosowanie trzech atrybutów daje wiêksz¹ skutecznoœæ ni¿ u¿ycie ka¿dego z nich osobno, b¹dŸ parami. Jest zatem uzasadnione u¿ycie kilku atrybutów do trenowania klasyfikatorów. Dodatkowo, wybór ka¿dego z zastosowanych atrybutów by³ dobr¹ decyzj¹, gdy¿ zwiêkszy³ jakoœæ klasyfikacji. 
+
+Rysunek \ref{fig:hist_f2_1k} przedstawia histogram uzyskanych miar $F_2$ dla ró¿nych wartoœci parametrów klasyfikatora SVM. Niektóre z nich daj¹ znacznie ni¿sze wyniki, ale wiêkszoœæ skutkuje uzyskaniem zbli¿onych rezultatów. Jednak, nawet dla poprawienia skutecznoœci o 10\%, warto zastosowaæ przeszukiwanie przestrzeni tych parametrów.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=11cm]{imgs/hist_f2_1k.png}
+	\caption{Wykres oceny klasyfikacji wyra¿onej miar¹ $F_2$ dla ró¿nych wartoœci parametrów C i $\gamma$ klasyfikatora SVM.}
+	\label{fig:hist_f2_1k}
+\end{figure}

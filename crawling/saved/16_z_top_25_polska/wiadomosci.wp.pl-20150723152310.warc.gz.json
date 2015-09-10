@@ -1,0 +1,197 @@
+[
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "UL", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "ARTICLE", 0 ],
+               [ "DIV", 11 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "SECTION", 5 ],
+               [ "MAIN", 1 ],
+               [ "SECTION", 2 ],
+               [ "ARTICLE", 0 ],
+               [ "DIV", 11 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 0 ],
+               [ "DIV", 16 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI", "LI", "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "SECTION", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 3 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "IMG", "SPAN", "SPAN" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723152053/http://wiadomosci.wp.pl/kat,36474,title,Mloda-ukrainska-dziennikarka-na-froncie-Odwaga-i-determinacja-Natalii-Kockowycz-zachwycily-media,wid,17726069,wiadomosc.html?ticaid=115461"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "SECTION", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "IMG", "SPAN", "SPAN" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "ARTICLE", 0 ],
+               [ "DIV", 10 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "SECTION", 5 ],
+               [ "MAIN", 1 ],
+               [ "SECTION", 2 ],
+               [ "ARTICLE", 0 ],
+               [ "DIV", 10 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 0 ],
+               [ "DIV", 15 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI", "LI", "LI", "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723152139/http://wiadomosci.wp.pl/kat,1329,title,Beata-Kempa-prezydent-upadl-na-kolana-i-blaga-lewice-o-glosy-na-PO,wid,17723476,wiadomosc.html?ticaid=115461&_ticrsn=2"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "DIV", 1 ],
+               [ "DIV", 2 ],
+               [ "SECTION", 1 ],
+               [ "DIV", 0 ],
+               [ "SECTION", 2 ],
+               [ "DIV", 4 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "DIV" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "DIV", 0 ],
+               [ "DIV", 2 ],
+               [ "SECTION", 1 ],
+               [ "DIV", 0 ],
+               [ "SECTION", 2 ],
+               [ "DIV", 4 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "DIV", "DIV" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723152220/http://tv.wp.pl/?ticaid=115461&_ticrsn=2"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "UL", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "ARTICLE", 0 ],
+               [ "DIV", 10 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "SECTION", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 3 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "IMG", "SPAN", "SPAN" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "SECTION", 5 ],
+               [ "MAIN", 1 ],
+               [ "SECTION", 2 ],
+               [ "ARTICLE", 0 ],
+               [ "DIV", 10 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 0 ],
+               [ "DIV", 14 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI", "LI", "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723152240/http://wiadomosci.wp.pl/kat,1019395,title,Kolejny-incydent-z-udzialem-drona-Tym-razem-na-lotnisku-w-Lodzi,wid,17724434,wiadomosc.html"
+   },
+   {
+      "data" : {
+         "skip" : true
+      },
+      "url" : "http://localhost:8090/replay/20150723152240/http://wiadomosci.wp.pl/kat,1356,title,Z-Czarnogory-wydalono-czterech-radykalnych-islamistow,wid,17724511,wiadomosc.html"
+   }
+]

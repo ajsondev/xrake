@@ -1,0 +1,18 @@
+collections:
+    {coll_name}:
+        index_paths: {index_paths}
+
+        wb_handler_class: !!python/name:archiveplayer.archiveplayer.ReplayHandler
+
+archive_paths: {archive_path}
+
+proxy_options:
+    unaltered_replay: true
+
+home_html: templates/index.html
+
+search_html: templates/pagelist_search.html
+
+framed_replay: false
+
+banner_html: False

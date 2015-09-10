@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="popup.js"></script>
+	<style>
+	p {
+		width: 300px;
+		cursor: pointer;
+		font-weight: bold;
+    font-size: 17px;
+    padding: 5px;
+    margin: 6px;
+	}
+
+  p[onclick] {
+     border: 1px solid lightgray;
+  }
+
+  p.size-small {
+    font-size: 14px;
+    padding: 0px;
+    margin-left: 30px;
+  }
+
+  hr {
+    color: black;
+    background-color: black;
+    height: 1px;
+    border: none;
+  }
+
+	</style>
+  </head>
+  <body>
+
+  <p class="action" actionName="InitializeTraining"> Initialize training </p>
+    <p class="action size-small" actionName="SkipGetTrainingJson"> Skip current training page </p>
+    <p class="action size-small" actionName="InjectTrainingCode" closeBehaviour> Inject training code to current page </p>
+    <p class="action size-small" actionName="TestTrainingMarksRecall" closeBehaviour> Test training marks recall </p>
+    <p class="action size-small" actionName="PresentTrainingMarks" closeBehaviour> Present training marks </p>
+
+<hr>
+ 
+  <p class="action" actionName="VisualizeTrainingFeatures" closeBehaviour> Visualize training features </p>
+  <p class="action" actionName="TrainBayesClassifier" closeBehaviour> Train Bayes classifier </p>
+  <p class="action" actionName="TrainSVMClassifier" closeBehaviour> Train SVM classifier </p>
+
+<hr>
+
+  <p class="action" actionName="TestClassificationOnPageSVM" closeBehaviour> Test classification on current page (SVM)</p>
+  <p class="action" actionName="TestClassificationOnPageBayes" closeBehaviour> Test classification on current page (Bayes)</p>
+
+  <p id="last-response" style="color: gray"></p>
+  </body>
+</html>

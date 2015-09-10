@@ -1,0 +1,3 @@
+var urls = document.querySelectorAll(".desc-paragraph a");
+for(var i=0; i < urls.length; ++i)
+	window.open("http://" + urls[i].innerText, '_blank');

@@ -1,0 +1,17 @@
+Cross validation, 2 groups, total 486 samples, metrics:
+Dokladnosc: 0.903292 czulosc: 0.925352 precyzja: 0.873799 Fb: 0.914312
+-------
+Cross validation, 10 groups, total 486 samples, metrics:
+Dokladnosc: 0.903472 czulosc: 0.909201 precyzja: 0.884533 Fb: 0.9032
+----------new learn--------------
+Learn 125 + 1716, measures for 250 + 5000
+Measure for 5682 samples
+Dokladnosc: 0.930834 czulosc: 0.853333 precyzja: 0.347826 Fb: 0.661157
+----------new learn--------------
+Learn 125 + 125, measures for 250 + 5000
+Measure for 5682 samples
+Dokladnosc: 0.910947 czulosc: 0.888889 precyzja: 0.293686 Fb: 0.632511
+----------new learn--------------
+Learn 125 + 0, measures for 250 + 5000
+Measure for 5682 samples
+Dokladnosc: 0.0399507 czulosc: 1 precyzja: 0.0396127 Fb: 0.170973

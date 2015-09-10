@@ -1,0 +1,49 @@
+\chapter{Budowa stron internetowych}
+\label{cha:budowa_stron}
+Obecnie witryny internetowe do prezentowania treœci u¿ytkownikowi stosuj¹ najczêœciej po³¹czenia trzech technologi:  hipertekstowego jêzyka znaczników (HTML), kaskadowych arkuszy stylów~(CSS) oraz jêzyka skryptowego JavaScript.
+
+Struktura strony wraz z jej treœci¹ definiowana jest za pomoc¹ znaczników HTML, które zagnie¿d¿one tworz¹ uk³ad drzewiasty nazywany obiektowym modelem dokumentu (DOM). Do manipulowania w³aœciwoœciami wizualnymi s³u¿y CSS. Dziêki niemu mo¿na ustaliæ typografiê, kolorystykê, odstêpy jak i ogólny uk³ad strony. Jednak, w celu uczynienia witryny interaktywn¹, musimy zastosowaæ JavaScript, umo¿liwia on manipulacjê drzewem DOM oraz atybutami CSS, pozwala ustaliæ reakcjê na dynamiczne zdarzenia takie jak ruchy mysz¹, naciœniêcia klawiszy, za³adowanie dokumentu. Wykorzystuje siê go tak¿e do pobierania danych bez prze³adowywania strony.
+
+Opisane powy¿ej technologie nie powsta³y jednoczeœnie. W roku 1991 zaprezentowany zosta³ HTML jako czêœæ us³ugi WWW, stworzonej przez Tima Berners-Lee. Nastêpnie w roku 1994 zaproponowano CSS, aby odseparowaæ formê dokumentów od ich treœci. Jednak do tego czasu HTML posiada³ ju¿ czêœciow¹ obs³ugê modyfikacji wygl¹du poprzez znaczniki takie jak <FONT>, <BLINK> czy <CENTER>, niektóre z nich s¹ u¿ywane do dziœ. Jako ostatni dodano w roku 1995 jêzyk JavaScript. Oczywiœcie od tamtego czasu technologie te nieustannie ewoluuj¹, zachowuj¹c wsteczn¹ kompatybilnoœæ, co~powoduje, ¿e~przetwarzanie stron internetowych jest bardziej skomplikowane, ni¿ mog³oby siê wydawaæ.
+
+Teoretycznie niektóre znaczniki posiadaj¹ przypisany typ informacji jaki powinny zawieraæ, tak jak <LI> okreœla element listy, <P> paragraf, <FOOTER> stopkê, w praktyce jednak nie jest to rygorystycznie przestrzegane. Przyk³adowo, lista mo¿e byæ przedstawiona jako tabela z jedn¹ kolumn¹, czy zbiór elementów <DIV> definiuj¹cych sekcje.
+
+Kilka zamieszczonych poni¿ej obrazów demonstruje z³o¿onoœæ stron internetowych na przyk³adzie witryny \textit{bbc.com}. Rysunek \ref{fig:bbc_tilt} przedstawia warstwy, jakie tworz¹ zagnie¿d¿one elementy strony, podczas gdy rysunek \ref{fig:bbc_dom} pokazuje to samo jako strukturê drzewiast¹. Prezentowana strona zawiera 1200 elementów.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=9cm]{imgs/bbc.png}
+	\caption{Przyk³ad strony informacyjnej (http://www.bbc.com/news).}
+	\label{fig:bbc}
+\end{figure}
+\begin{figure}[!ht]
+	\includegraphics[width=14cm]{imgs/bbc_tilt2.png}
+	\caption{Ilustracja zagnie¿dzenia elementów strony. Wykonano przy pomocy narzêdzia Mozilla Tilt \cite{Mozilla_Tilt}.}
+	\label{fig:bbc_tilt}
+\vspace{4\baselineskip}
+%\end{figure}
+%\begin{figure}[h]
+	\includegraphics[width=15cm]{imgs/bbc_dom.png}
+	\caption{Ilustracja wêz³ów drzewa DOM strony. Wygenerowano przy u¿yciu narzêdzia autora pracy.}
+	\label{fig:bbc_dom}
+\end{figure}
+
+\clearpage
+\section{Przyk³ady list}
+W tym miejscu zamieszczam przyk³ady list zgodnych z definicj¹ z~podrozdzia³u~\ref{sec:definicje}. Pozwol¹ one zorientowaæ siê Czytelnikowi co, w~praktyce, ma~rozpoznawaæ system zbudowany w ramach niniejszej pracy. Poni¿sze rysunki zawieraj¹ wycinki list ze zbioru ucz¹cego wraz z odpowiadaj¹cymi im fragmentami drzewa DOM. Widaæ, ¿e powtarzan¹ca siê struktura elementów listy ma swoje odzwierciedlenie w regularnoœciach drzewa.
+\vspace{1\baselineskip}
+\begin{figure}[h]
+	\includegraphics[width=15cm]{imgs/ex_list_1.png}
+	\caption{Fragment listy przedmiotów oferowanych na akukcji wraz z odpowiadaj¹cym jej drzewem DOM. ród³o: http://allegro.pl.}
+	%\label{fig:bbc_tilt}
+\end{figure}
+\clearpage
+\begin{figure}[h]
+	\includegraphics[width=15cm]{imgs/ex_list_2.png}
+	\caption{Fragment listy godzinowej prognozy pogody wraz z odpowiadaj¹cym jej drzewem DOM. ród³o: http://pogoda.interia.pl.}
+	%\label{fig:bbc_tilt}
+\end{figure}
+\begin{figure}[h]
+	\includegraphics[width=15cm]{imgs/ex_list_3.png}
+	\caption{Fragment listy funduszy emerytalnych wraz z odpowiadaj¹cym jej drzewem DOM. ród³o: http://www.money.pl/gielda/.}
+	%\label{fig:bbc_tilt}
+\end{figure}

@@ -1,0 +1,17 @@
+SVM , Bayes
+
+a) pq
+b) wpc
+c) min var
+
+a 89, 85
+b 85, 78
+c 88, 89
+
+
+ab 91, 85
+ac 88, 88
+bc 89, 89
+
+
+abc 

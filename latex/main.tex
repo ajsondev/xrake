@@ -1,0 +1,149 @@
+\documentclass[a4paper,onecolumn,oneside,12pt,wide]{mwrep}
+%...[,floatssmall]
+%\documentclass{report}
+%\linespread{1.3}
+\usepackage{listings}
+
+\renewcommand\lstlistingname{Wydruk}
+
+\usepackage[pdftex]{color}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bookman}
+
+\usepackage{geometry}
+\usepackage{t1enc}
+
+%\usepackage{svg}
+
+%\usepackage{booktabs}
+
+\usepackage{graphics}
+%table scaling
+
+\usepackage{multirow}
+
+\usepackage{subfig}
+
+%for listing frame
+\usepackage{framed}
+
+%\usepackage{float} - H in figures (really HERE)
+
+\usepackage{placeins}
+
+\usepackage{hyphenat}
+
+\usepackage{setspace}
+\doublespacing
+%\onehalfspacing
+
+%tutaj w zaleznosci od tego czy to win czy linux to mozna odkomentowac co trzeba
+\usepackage{polski}
+%\usepackage[MeX]{polski}
+%\usepackage[polish]{babel}
+\usepackage[cp1250]{inputenc}
+%\usepackage[cp1250]{inputenc}
+%\usepackage[latin2]{inputenc}
+
+\usepackage{url}
+
+%\usepackage{biblatex}
+
+%\usepackage{hyperref}
+
+\title{Praca in�ynierska}
+\author{Marcin M}
+
+
+\definecolor{CommentsColor}{rgb}{0.15,0.50,0.15}
+\definecolor{ListingBackground}{rgb}{0.95,0.95,0.95}
+
+\renewcommand{\rmdefault}{ptm}
+
+%====================================
+
+% marginesy
+%\textwidth\paperwidth
+%\advance\textwidth -55mm
+%\oddsidemargin-0.9in
+%\advance\oddsidemargin 33mm
+%\evensidemargin-0.9in
+%\advance\evensidemargin 33mm
+%\topmargin -1in
+%\advance\topmargin 25mm
+%\setlength\textheight{48\baselineskip}
+%\addtolength\textheight{\topskip}
+%\marginparwidth15mm
+
+\clubpenalty=10000 % to kara za sierotki
+\widowpenalty=10000 % nie pozostawia wdów
+\brokenpenalty=10000 % nie dzieli wyrazów pomiêdzy stronami
+\sloppy
+
+\tolerance4500
+\pretolerance250
+\hfuzz=1.5pt
+\hbadness1450
+
+% zywa pagina off
+%\renewcommand{\chaptermark}[1]{\markboth{\scshape\small\bfseries \
+%#1}{\small\bfseries \ #1}}
+%\renewcommand{\sectionmark}[1]{\markboth{\scshape\small\bfseries\thesection.\
+%#1}{\small\bfseries\thesection.\ #1}}
+%\renewcommand{\headrulewidth}{0.5pt}
+%\renewcommand{\footrulewidth}{0.pt}
+%\pagestyle{uheadings}
+
+%\usepackage{polski}
+
+% \textheight232mm
+%%% \setlength{\textwidth}{\textwidth}
+% \setlength{\oddsidemargin}{\evensidemargin}
+% \setlength{\evensidemargin}{0.3cm}
+
+%\linespread{1.5}
+
+%====================================
+
+\usepackage{multibib}
+\usepackage[sort, compress]{cite}
+
+\begin{document}
+
+
+\lstdefinelanguage{JavaScript}{
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  sensitive=true
+}
+
+%\maketitle
+%\pagenumbering{roman}
+%\pagenumbering{arabic}
+%\setcounter{page}{1}
+
+
+\input{beginning_and_abstract}
+\tableofcontents
+\newpage
+\input{chapter1}
+\input{chapter2}
+\input{chapter3}
+\input{chapter4}
+\input{chapter5}
+\input{chapter6}
+\input{final_chapter}
+
+\appendix
+
+%\bibliographystyle{plplain}
+\bibliographystyle{plunsrt}
+\bibliography{bibliography}
+\end{document}

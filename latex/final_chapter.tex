@@ -1,0 +1,6 @@
+\chapter{Podsumowanie}
+ W ramach niniejszej pracy uda³o siê stworzyæ system rozpoznaj¹cy listy na stronach internetowych. Uzyska³em 96\% czu³oœæ w odnajdywaniu list przy 20\% precyzji. Odró¿nianie elementów podobnych do list, ale nimi niebêd¹cych, takich jak menu czy stopka okaza³o siê trudne. Najprawdopodobniej ma³a precyzja wynika z braku filtrowania danych wejœciowych, nie dokonano segmentacji elementów. Bardzo czêsto listy s¹ wykrywane wewn¹trz innych list, co nie powinno byæ dozwolone i mo¿e zostaæ odfiltrowane z u¿yciem dodatkowych technik.
+
+ Uwzglêdnienie atrybutów wizualnych (rozmiaru i po³o¿enia) pozwoli³o zwiêkszyæ skutecznoœæ klasyfikatora SVM o oko³o 2\%, a Naiwnego Klasyfikatora Bayesa o 5\%. Jednoczeœnie powinno poprawiæ dzia³anie dla nietypowych przypadków, poniewa¿ zmniejsza wra¿liwoœæ klasyfikatorów na anomalie w strukturze DOM strony.
+
+ System wykorzystuj¹cy przegl¹darkê internetow¹ daje du¿o wiêksze mo¿liwoœci poszukiwania atrybutów. W ³atwy sposób pozwala je pozyskiwaæ, jak i ³¹czyæ ze struktur¹ dokumentu. Nieprzetworzone atrybuty takie jak po³o¿enie elementu s¹ ma³o przydane, jednak uwzglêdnienie struktury dokumentu i obliczenie, przyk³adowo, wariancji wartoœci dla elementów potomnych pozwala poprawiæ klasyfikacjê.

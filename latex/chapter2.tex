@@ -1,0 +1,110 @@
+\chapter{Zagadnienie klasyfikacji}
+S³ownik jêzyka polskiego PWN \cite{sjpPWN} opisuje klasyfikacjê jako podzia³ osób, przedmiotów, zjawisk na grupy wed³ug okreœlonej zasady. W informatyce zagadnienie to jest jedn¹ z metod eksploracji danych, czyli przetwarzaniu przez komputer okreœlonych informacji, w celu odkrycia ukrytych w nich prawid³owoœci. Przyk³adem mo¿e byæ okreœlenie czy klientka sklepu internetowego spodziewa siê dziecka (przypisanie do grupy kobiet w ci¹¿y) tylko i wy³¹cznie na podstawie analizy przegl¹danych przez ni¹ produktów. Sklep, posiadaj¹c tak¹ wiedzê, mo¿e zasugerowaæ kupno odpowiednich towarów ze swojej oferty.
+
+Nale¿y odró¿niæ klasyfikacjê od regresji, u¿ywanej w statystyce. Koncentruje siê ona na problemach numerycznych -- jako wynik przewidywañ otrzymujemy wartoœci liczbowe, w klasyfikacji natomiast s¹ to etykiety (klasy).
+
+W tej pracy skupiam siê na klasyfikatorach binarnych, wykorzystuj¹cych uczenie maszynowe z nadzorem. S³owo binarny w powy¿szym wyra¿eniu oznacza podzia³ obiektów na dwie grupy. Uczenie maszynowe to dziedzina sztucznej inteligencji zak³adaj¹ca stworzenie systemu potrafi¹cego doskonaliæ siê przy pomocy dostarczanych danych. Budowa takiego systemu sk³ada siê z dwóch etapów:
+\begin{itemize}
+\item uczenia klasyfikatora wykorzystuj¹c zgromadzone próbki danych reprezentowane przez wektory ich cech,
+\item w³aœciwej klasyfikacji danych wejœciowych.
+\end{itemize}
+Nadzór w procesie uczenia polega na tym, ¿e ka¿da próbka na wejœciu ma przypisan¹ klasê. W przypadku klasyfikacji binarnej bêdzie to wartoœæ boolowska. Alternatyw¹ jest uczenie bez nadzoru, w którym klasyfikator, na podstawie próbek, samodzielnie okreœla przynale¿noœæ do klas, wyszukuj¹c anomalie.
+
+Kluczowe przy trenowaniu klasyfikatora s¹ odpowiednio dobrane dane ucz¹ce. Liczba próbek nie mo¿e byæ zbyt ma³a. Powinny one równomiernie odzwierciedlaæ rozk³ad klas oraz wzorców cech w spodziewanych danych. W przeciwnym razie mo¿e dojœæ do przeuczenia, czyli zbyt du¿ego dopasowania siê klasyfikatora do danych trenuj¹cych. Warto jednak zauwa¿yæ, ¿e od pewnego momentu zwiêkszanie iloœci próbek ma coraz mniejsze znaczenie.
+
+\section{Naiwny Klasyfikator Bayesa}
+Naiwny Klasyfikator Bayesa opera siê na modelu probabilistycznym. Korzysta on z twierdzenia Bayesa:
+\begin{equation}
+\label{eq:Bayes1}
+P(H|X) = \frac{P(X|H)P(H)}{P(X)}
+\end{equation}
+gdzie H oznacza hipotezê, ¿e próbka danych X nale¿y do okreœlonej klasy. P(H | X) jest poszukiwan¹ podczas klasyfikacji wartoœci¹, pozwala ona maj¹c próbkê danych przypisaæ j¹ do jednej z klas (wybieramy t¹ o najwiêkszym prawdopodobieñstwie warunkowym). P(H) oznacza prawdopodobieñstwo, ¿e dowolna próbka nale¿y do okreœlonej klasy -- gdy zatem dodamy do siebie te wartoœci dla ka¿dej z wystêpuj¹cych klas otrzymamy wartoœæ 1. Analogicznie P(X | H) to prawdopodobieñstwo wyst¹pienia konretnej próbki gdy znamy tylko klasê do jakies jest ona przypisana.
+
+Przyk³ad: niech H definiuje, ¿e jakaœ osoba posiada w domu bia³y kapelusz, X to zaobserwowanie na ulicy cz³owieka w bia³ej marynarce:
+\begin{itemize}
+\item P(H | X) wyra¿a szansê, ¿e widziana przez nas osoba posiada bia³y kapelusz,
+\item P(X | H) szansê posiadania przez kogoœ bia³ej marynarki gdy wiemy, ¿e ma on bia³y kapelusz,
+\item P(H) oznacza odsetek ludzi chodz¹cych po ulicy i posiadaj¹cych bia³e kapelusze,
+\item P(X) szanse zobaczenia na ulicy kogoœ w bia³ej marynarce.
+\end{itemize}
+
+Przydatnoœæ powy¿szego twierdzenia wynika z faktu, ¿e podczas procesu nauki jesteœmy w stanie wyliczyczyæ prawdopodobieñstwa stoj¹ce po prawej stronie równania.
+
+Podczas klasyfikacji zwykle nie interesuje nas jednak konkretne prawdopodobieñstwo, a jedynie klasa, która odpowiada za jego maksymaln¹ wartoœæ. Zatem w równaniu \ref{eq:Bayes1} mo¿emy pomin¹æ P(X), gdy¿ jest to taka sama wartoœæ dla ka¿dej klasy.
+
+Prawdopodobieñswa P(H) mo¿emy szacowaæ jako liczbê próbek trenuj¹cych przypisanych do danej klasy podzielon¹ przez liczbê klas. Alternatywnie ten czynnik mo¿na pomin¹æ gdy nie jesteœmy go w stanie ustaliæ z dobrym przybli¿eniem.
+
+W praktyce obliczenie wszystkich wartoœci P(X | C) nie jest mo¿liwe poniewa¿ przyk³adowo dla 4 atrybutów przyjmuj¹cych 100 ró¿nych wartoœci mamy 100\textsuperscript{4} mo¿liwych kombinacji. Dlatego przyjmuje siê \textit{naiwne} za³o¿enie o niezale¿noœci atrybutów. To znaczy, ¿e konkretna wartoœæ jednego z nich nie wp³ywa na wartoœæ innego atrybutu. Zatem mo¿na zastosowaæ poni¿szy wzór:
+\begin{equation}
+P(X|C_{i}) = \prod_{k=1}^n P(x_{k}|C_{i})
+\end{equation}
+gdzie $k$ to numer porz¹dkowy atrybutu z próbki $X$, $ x_{k} $ to jego wartoœæ, a $ C_{i} $ jedna z klas.
+
+Poszczególne $ P(x_{k}|C_{i}) $ dla ka¿dej z klas $ C_{i} $  obliczymy w nastêpuj¹cy sposób:
+\begin{itemize}
+\item je¿eli atrybut jest dyskretny to prawdopodobieñstwo bêdzie liczb¹ próbek trenuj¹cych przypisanych do danej klasy i posiadaj¹cych wartoœæ $ x_{k} $ atrybutu $k$,
+\item gdy atrybut jest typu ci¹g³ego nale¿y przyj¹æ jakiœ rozk³ad prawdopodobieñstwa, w ksi¹¿ce \cite{DataMiningConceptsTechniques} jako standardowy podaje siê rozk³ad Gaussa. Nastêpnie mo¿emy okreœliæ parametry danego rozk³adu obliczaj¹c wartoœci takie jak œrednia i odchylenie standardowe.
+\end{itemize}
+
+\section{Klasyfikator SVM}
+Klasyfikator SVM, nazywany tak¿e metod¹ wektorów noœnych, jest jednym z najpopularniejszych klasyfikatorów. Jak podaje \cite{DataMiningConceptsTechniques} wynika to z jego du¿ej dok³adnoœci oraz wiêkszej ni¿ w innych metodach odpornoœci na przetrenowanie. %SVM posiada wiele zastosowañ
+
+Najprostszym przypadkiem dla SVM bêdzie dwuwymiarowa przestrzeñ z próbkami nale¿¹cymi do dwóch klas A i B, u³o¿onymi w ten sposób, ¿e da siê oddzieliæ prost¹, te rezprezentuj¹ce tylko jedn¹ z nich. Ilustruje to poni¿szy rysunek:
+\begin{figure}[h]
+  \centering
+  \includegraphics[height=5cm]{imgs/svm_2d.png}
+  \caption{Przyk³ad próbek liniowo rozdzielnych. Opracowano na podstawie\cite{DataMiningConceptsTechniques}.}
+\end{figure}
+
+Dowolna prosta wybrana w ten sposób umo¿liwi nam klasyfikacjê, jednak aby zapewniæ jak najmniejszy poziom b³êdów SVM stosuje strategiê prostej (w ogólnym przypadku: hiperp³aszczyzny) z maksymalnymi marginesami. Formalnie hiperp³aszczyznê definiujemy:
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[width=14cm]{imgs/svm_2d_margins.png}
+%  \caption{Ilustracja marginesów dla wybranych prostych.}
+%\end{figure}
+\begin{equation}
+\label{eq:hyperplane}
+W*X + b = 0
+\end{equation}
+gdzie $W$ to wektor wspó³czynników, $b$ to skalarna wartoœæ przesuniêcia, $X$ to wektor okreœlaj¹cy po³o¿enie punktu w przestrzeni. Przy danej hiperp³aszczyŸnie dla ka¿dej próbki mo¿emy policzyæ odleg³oœæ euklidesow¹ pomiêdzy nimi. Margines to suma odleg³oœci jednej próbki z klasy A i jednej i klasy B podzielona przez 2. Gdy ta wartoœæ jest najmniejsza, wtedy próbki s¹ zapisywane i tworz¹ wektory noœne. Faktyczna hiperp³aszczyzna dziel¹ca nie jest zapisywana i nie jest to ta sama dla której obliczyliœmy pocz¹tkowe odleg³oœci, znajduje siê ona w odleg³oœci równej marginesowi od obu wektorów noœnych.
+
+W praktyce nie dokonuje siê przedstawionych powy¿ej obliczeñ, a sprowadza problem znelezienia minimalnych marginesów do kwadratowego wypuk³ego problemu optymalizacji, lecz to zagadnienie nie bêdzie tutaj opisywane.
+
+Co jednak gdy próbki nie s¹ liniowo rozdzielne? Stosujemy wtedy ich transformacjê do wy¿szego wymiaru, u¿ywaj¹c przekszta³cenia nieliniowego. Takie przekszta³cenie definiowane jest za pomoc¹ funkcji j¹drowej.
+
+
+\section{Kryteria oceny}
+\label{sec:kryteria_oceny}
+Aby poprawnie oceniæ jakoœæ klasyfikatora nale¿y zdefiniowaæ odpowiednie wskaŸniki. Poni¿ej przedstawiam najczêœciej stosowane miary dla klasyfikacji binarnej:
+\begin{equation}
+\textit{dok³adnoœæ} = \frac{TP+TN}{P+N}
+\end{equation}
+\begin{equation}
+\textit{czu³oœæ} = \frac{TP}{P}
+\end{equation}
+\begin{equation}
+\textit{specyficznoœæ} = \frac{TN}{N}
+\end{equation}
+\begin{equation}
+\textit{precyzja} = \frac{TP}{TP+FP}
+\end{equation}
+\begin{equation}
+F_{\beta} = \frac{(1+\beta^2) \times \textit{precyzja} \times \textit{czu³oœæ}}{ \beta^2 \times \textit{precyzja} + \textit{czu³oœæ}}
+\end{equation}
+
+\begin{description}
+\item[TP] -- liczba poprawnie sklasyfikowanych próbek klasy A (pozytywnej),
+\item[TN] -- liczba poprawnie sklasyfikowanych próbek klasy B (negatywnej),
+\item[P] -- liczba wszystkich próbek klasy A,
+\item[N] -- liczba wszystkich próbek klasy B,
+\item[FP] -- liczba próbek klasy B b³êdnie sklasyfikowanych jako próbki klasy A (b³¹d pierwszego rodzaju),
+%\item[FN] -- liczba próbek klasy B b³êdnie sklasyfikowanych jako próbki klasy A (b³¹d drugiego rodzaju)
+\item[$\beta$] -- waga okreœlaj¹ca ile razy bardziej cenimy czu³oœæ ni¿ precyzjê.
+\end{description}
+
+Dok³adnoœæ to odsetek poprawnie odgadniêtych klas dla wszystkich próbek. Czu³oœæ wskazuje odsetek znalezionych próbek klasy A. Specyficznoœæ jest analogiczna do czu³oœci, ale dotyczy klasy B. Precyzja to odsetek prawid³owo przypisanych klas dla próbek sklasyfikowanych jako nale¿¹ce do klasy A.
+
+\subsubsection{Walidacja krzy¿owa}
+Mierzenie jakoœci klasyfikacji dla próbek wczeœniej u¿ytych do wytrenowania klasyfikatora nie odzwierciedla dobrze rzeczywistych warunków. Otrzymane wyniki bêd¹ w takim przypadku zbyt optymistyczne. Standardowo algorytmy pracuj¹ na danych nieznanych w trakcie uczenia. Aby symulowaæ tak¹ sytuacjê stosuje siê techniki walidacji krzy¿owej. Polega ona na podziale zbioru próbek na grupy i przeprowadzaniu uczenia oraz testów na osobnych podzbiorach.
+
+U¿yta w niniejszej pracy walidacja jest wariacj¹ walidacji k-krotnej. Zbiór treningowy dzielony jest na kilka grup, nastêpnie ka¿da z nich wykorzystywana jest do nauczenia jednego klasyfikatora. Metryki jakoœci wyliczane s¹ przy u¿yciu reszty grup. Nastêpnie liczona jest œrednia arytmetyczna metryk dla wszystkich wygenerowanych klasyfikatorów. W ten sposób mo¿na zarówno wykorzystaæ wszystkie posiadane próbki do nauki, jak i zachowaæ odpowiednie proporcje pomiêdzy liczb¹ danych ucz¹cych, a liczb¹ danych testowych.

@@ -1,0 +1,321 @@
+[
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "UL", 1 ],
+               [ "DIV", 5 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI", "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723151710/http://muzyka.onet.pl/wywiady/polscy-dziennikarze-muzyczni-lukasz-napora-nie-robimy-krzywdy-polskiej-kulturze/by9frz"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "DIV",
+               "DIV",
+               "DIV",
+               "DIV",
+               "DIV",
+               "DIV",
+               "DIV",
+               "DIV",
+               "DIV",
+               "DIV",
+               "DIV",
+               "DIV",
+               "DIV"
+            ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "TBODY", 1 ],
+               [ "TABLE", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 3 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR"
+            ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723151734/http://eurosport.onet.pl/tenis/atp/atp-w-bastad-awans-lukasza-kubota-do-polfinalu-debla/cxlh97"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 0 ],
+               [ "DIV", 4 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 3 ],
+               [ "DIV", 0 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE"
+            ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 6 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 3 ],
+               [ "DIV", 0 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "DIV", "DIV", "DIV" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 7 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 3 ],
+               [ "DIV", 0 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI", "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 3 ],
+               [ "DIV", 0 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "DIV", "NOSCRIPT", "DIV" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723151801/http://wiadomosci.onet.pl/nauka"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "UL", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 7 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI", "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 6 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "DIV", "DIV", "DIV" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 1 ],
+               [ "DIV", 6 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723151832/http://wiadomosci.onet.pl/nauka/rozpoczelo-sie-najwieksze-poszukiwanie-pozaziemskiej-inteligencji/0es09z"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "UL", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 5 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI", "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 1 ],
+               [ "DIV", 5 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723151837/http://wiadomosci.onet.pl/warszawa/tragiczny-wypadek-na-obwodnicy-garwolina-autobus-wpadl-do-rowu/6v0zhz"
+   }
+]

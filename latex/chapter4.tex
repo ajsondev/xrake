@@ -1,0 +1,72 @@
+\chapter{Architektura systemu}
+System klasyfikacji stworzony w ramach niniejszej pracy sk³ada siê z dwóch g³ównych czêœci: rozszerzenia przegl¹darki internetowej oraz modu³u serwerowego, w którym umieszczono algorytmy klasyfikatorów. Ten zgrubny schemat ilustruje rysunek \ref{fig:architektura1}. Taki podzia³ zosta³ ustalony z kilku powodów, najwa¿niejsze z nich opisujê w poni¿szych akapitach.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=13cm]{imgs/architektura1.png}
+	\caption{Podstawowy schemat architektury.}
+	\label{fig:architektura1}
+\end{figure}
+
+Realizacja poszczególnych zadañ jest du¿o ³atwiejsza za pomoc¹ œrodowisk do tego dostosowanych. Przegl¹darki internetowe œwietnie radz¹ sobie w przetwarzaniem stron internetowych -- to ich g³ówne zadanie. Mo¿emy zatem pozwoliæ przegl¹darce pobieraæ, parsowaæ, renderowaæ strony i od niej uzyskiwaæ interesuj¹ce nas informacje. Niektórzy decyduj¹ siê na w³asne rozwi¹zania obs³uguj¹ce jêzyk HTML oraz CSS, tak jak autorzy pracy \cite{MichelangeloVisual}. Jednak oni sami stwierdzaj¹, ¿e parsowanie HTML sprawi³o im trudnoœci dlatego, ¿e strony internetowe czêsto nie s¹ zgodne ze standardami. Z racji skomplikowania specyfikacji musieli tak¿e zrezygnowaæ z obs³ugi styli CSS, które s³u¿¹ do~elastycznego modyfikowania wygl¹du elementów stron. Praca zosta³a opublikowana w roku 2002, gdy Internet by³ mniej rozwiniêty, a konstrukcja stron prostsza. Za pomoc¹ takiego rozwi¹zania uzyskalibyœmy dziœ znacznie gorsze rezultaty. Jednak osadzanie popularnych bibliotek klasyfikatorów bezpoœrednio w rozszerzeniu jest utrudnione b¹dŸ niemo¿liwe (zale¿nie od przegl¹darki) z tego powodu zosta³y one umieszczone w czêœci serwerowej. 
+
+Zastosowanie architektury klient-serwer implementuje model oprogramowania jako us³ugi. Wiele nowych komercyjnych systemów jest realizowanych w ten sposób. Jako przyk³ad mo¿na podaæ us³ugi Google takie jak: t³umacz, synteza mowy czy rozpoznawanie tekstu. Dziêki temu uzyskujemy wiêksz¹ elastycznoœæ, a zmiany w klasyfikatorach ³atwiej wdra¿aæ. Mo¿na ulepszaæ algorytmy pozyskuj¹c dodatkowe dane od klientów.
+
+
+\section{Rozszerzenie przegl¹darki internetowej}
+Rozszerzenie napisane jest w jêzyku JavaScript z minimalistycznym widokiem steruj¹cym w HTML i CSS. Wykorzystuje ono mechanizm rozszerzeñ Chrome, z którym kompatybilna jest tak¿e Opera oraz Microsoft Edge. Sk³ada siê ono z~dwóch g³ównych fragmentów:
+\begin{itemize}
+\item modu³ t³a,
+\item modu³ kontekstu strony,
+\item widok steruj¹cy.
+\end{itemize}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=13cm]{imgs/architektura_rozszerzenie.png}
+	\caption{Schemat architektury rozszerzenia.}
+	\label{fig:architektura_rozszerzenie}
+\end{figure}
+
+%\newpage
+Ka¿de dzia³anie jest rozpoczynane z poziomu widoku steruj¹cego. Po wybraniu akcji przekazywana jest wiadomoœæ do~modu³u t³a. Nastêpnie zestawiane jest po³¹czenie z~serwerem. U¿ywam protoko³u WebSockets z powodu natywnego wsparcia w~przegl¹darce. Przyk³adowe akcje to: rozpoczêcie manualnego oznaczania stron, prezentacja testowych stron wraz z markerami, test klasyfikacji na aktywnej stronie.
+
+Modu³ t³a zajmuje siê przygotowaniem strony oraz serwera do wykonania zleconej akcji. Przesy³a wiadomoœæ inicjuj¹c¹ do serwera. Je¿eli akcja dotyczy aktywnej strony, wtedy wstrzykuje on modu³ kontekstu strony. Nastêpnie oczekuje na nadejœcie z serwera rozkazów wykonania funkcji takich pobranie wartoœci atrybutów, selekcja losowego elementu czy oznaczenie elementu prostok¹tem w celu prezentacji wyników.
+
+Modu³ kontekstu strony zajmuje siê operacjami na drzewie DOM dokumentu do którego zosta³ wstrzykniêty. Przegl¹darka internetowa pozwala na dostêp do treœci strony wy³¹cznie skryptom umieszczonym w ten sposób. U¿ywaj¹c API JavaScript mo¿emy pobieraæ ze strony informacje takie jak: rozmiar i kolor tekstu, pozycjê i rozmiar elementów oraz ich typ. Mamy tak¿e dostêp do drzewa DOM, za pomoc¹ którego enumerujemy wszystkie elementy strony.
+
+Nietypow¹ operacj¹ zaimplementowan¹ w module kontekstu strony jest pobranie danych treningowych. Uruchamia ona prosty interfejs pozwalaj¹cy na oznaczanie elementów strony jako list.
+
+Komunikacja pomiêdzy widokiem steruj¹cym, a modu³em t³a odbywa siê przy pomocy przekazywania wiadomoœci opisanego w dokumentacji \cite{ChromeMessagePassing}. Wstrzykiwanie kodu do strony oraz odbiór wyników u¿ywaj¹ mechanizmu zaprezentowanego w \cite{ChromeExeciteScript}. Protokó³ WebSocets, niezbêdny do po³¹czenia z serwerem, przedstawiono natomiast na stronie \cite{WebSocketsProtocol}.
+
+
+\section{Serwer}
+\label{sec:Serwer}
+Serwer zosta³ napisany w jêzyku C++. Jego szkielet oparty jest na bibliotece \nohyphens{POCO}~\cite{LibPOCO}, która umo¿liwia implementacjê serwera WebSockets. Aplikacja sk³ada siê z~nastêpuj¹cych czêœci:
+\begin{itemize}
+\item serwer WebSockets,
+\item kontroler akcji,
+\item modu³ zdalnego wywo³ywania procedur (RPC),
+\item menad¿er uczenia,
+\item zarz¹dca archiwów Warc,
+\item klasyfikatory.
+\end{itemize}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=13cm]{imgs/architektura_serwer.png}
+	\caption{Schemat modu³ów serwera.}
+	\label{fig:architektura_serwer}
+\end{figure}
+Wiêkszoœæ z wymienionych czêœci opakowana jest w osobne klasy, dodatkowo serwer posiada szereg pomocniczych funkcji do serializacji próbek oraz obs³ugi formatu JSON, u¿ywanego przy RPC.
+
+Po starcie serwer nas³uchuje na porcie TCP. Standardowo ca³a komunikacja odbywa siê w ramach pojedynczego po³¹czenia, które posiada niezale¿ny kontroler akcji. Protokó³ WebSockets oparty jest na TCP, ale jego nietypow¹ cech¹ jest inicjowanie po³¹czenia za pomoc¹ HTTP. W pocz¹tkowej fazie wysy³ane jest ¿¹danie HTTP z u¿yciem nag³ówka Upgrade, dopiero póŸniej nastêpuje w³aœciwa komunikacja. Szczegó³owe informacje na temat protoko³u mo¿na znaleŸæ pod adresem \cite{WebSocketsProtocol}.
+
+Kontroler akcji jest bardzo minimalistyczny, otrzymuje on ci¹g znaków reprezentuj¹cy nazwê inicjowanej akcji oraz ewentualne argumenty oddzielone znakiem spacji. W obrêbie kontrolera tworzony jest modu³ zdalnego wywo³ywania procedur oraz menad¿er uczenia.
+
+Modu³ zdalnego wywo³ywania procedur zawiera wszystkie funkcje 
+wykonywane w œrodowisku przegl¹darki internetowej, takie jak: otwarcie konkretnej strony, pobranie ze strony informacji treningowych, enumeracja elementów na stronie, pobranie po³o¿enia elementów.
+
+Po rozpoczêciu akcji treningu menad¿er uczenia wykorzystuje zarz¹dce archiwów Warc oraz modu³ zdalnego wywo³ywania procedur, aby zlecaæ ³adowanie kolejnych stron internetowych. Nastêpnie pobiera on dane treningowe, które wprowadza u¿ytkownik. Gdy wszystkie strony s¹ ju¿ oznaczone przez u¿ytkownika uruchamia on poprzez kontroler akcji operacjê zapisu danych do plików json.
+
+Zarz¹dca archiwów Warc jest odpowiedzialny za sterowanie zewnêtrzym programem, który ³aduje z dysku archiwa Warc zawieraj¹ce zapisane grupy stron internetowych. Szegó³owy opis u¿ytego programu znajduje siê w sekcji \ref{sec:Warc}.
+
+Klasyfikatory posiadaj¹ opcjê trenowania oraz dynamicznego tagowania elementów dla zadanej strony. Dostêp do nich odbywa siê za poœrednictwem kontrolera akcji. Procedury trenowania wykorzystuj¹ dane zebrane przez menad¿era uczenia, a zapisane w postaci plików json. Pliki te, jako mechanizm poœrednicz¹cy, zosta³y wykorzystane aby unikn¹æ wielokrotnego otwierania stron podczas testowania ró¿nych parametrów klasyfikatorów, gdy¿ jest to bardzo czasoch³onne.

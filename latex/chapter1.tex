@@ -1,0 +1,26 @@
+\chapter{Wstêp}
+Witryny w sieci WWW zawieraj¹ ogrom informacji, których z ka¿dym dniem jest coraz wiêcej. Ludzie powoli przestaj¹ byæ w stanie samodzielnie przetworzyæ tak¹ iloœæ danych. Dlatego to zadanie coraz czêœciej zleca siê komputerom. 
+
+W roku 2013 hakerzy, podszywaj¹c siê pod agencjê \textit{Associated Press}, umieœcili fa³szyw¹ informacjê o eksplozjach w \textit{Bia³ym Domu}. W ci¹gu nastêpnych trzech minut wartoœæ indeksu amerykañskiej gie³dy spad³a o 136 miliardów dolarów. \textit{Bloomberg} ocenia, ¿e tak du¿y spadek by³ wynikiem dzia³ania algorytmów przetwarzaj¹cych wiadomoœci prasowe \cite{Bloomberg}. 
+
+Us³uga \textit{Google Now} zaskakuje u¿ytkowników spersonalizowanymi wiadomoœciami takimi jak: numer terminalu, z którego odlatuje nasz samolot, lista zabytków znajduj¹cych siê w miejscu naszego pobytu, wyniki meczu dru¿yny sportowej, któr¹ siê interesujemy. Prezentacja tych treœci nie by³aby mo¿liwa bez automatycznego przetwarzania i klasyfikacji fragmentów stron internetowych. 
+
+Jak pokazuj¹ powy¿sze przyk³ady, dziedzina eksploracji danych ma bardzo szerokie zastosowania. Dynamicznie siê rozwijaj¹c, oferuje rosn¹c¹ liczbê udogodnieñ w zarz¹dzaniu informacjami. Z tego powodu jej fragment sta³ siê materia³em do niniejszej pracy.
+
+W nastêpnym rozdziale opisujê ogólne zagadnienie klasyfikacji, wraz ze sposobem dzia³ania kilku algorytmów. Rozdzia³ trzeci poœwiêcony jest podstawom struktury dokumentów HTML oraz przyk³adom list demonstrowanych w formie graficznej. W rozdziale czwartym zawarty jest opis architektury systemu klasyfikuj¹cego. Rozdzia³ pi¹ty przedstawia wybrane szczegó³y implementacyjne. Rozdzia³ szósty prezentuje uzyskane wyniki oraz sposób doboru uwzglêdnionych atrybutów.
+
+\section{Definicje u¿ywanych terminów}
+\label{sec:definicje}
+Poni¿ej przedstawiam opis podstawowych terminów, okreœlaj¹cy ich znaczenie w niniejszej pracy.
+\begin{itemize}
+\item \textbf{Lista} to fragment strony internetowej, który zawiera elementy o podobnej strukturze, pe³ni¹cy funkcjê wyliczenia niezale¿nych obiektów o charakterze informacyjnym. Roli listy nie pe³ni¹ elementy nawigacyjne. Przyk³ady list na stronach to: zbiór wiadomoœci, wyniki meczów pi³karskich, rezultaty wyszukiwania.
+\item \textbf{Atrybut, cecha} to wartoœæ lub zbiór wartoœci liczbowych, opisuj¹cych w³aœciwoœci elementu strony internetowej, reprezentowanego przez wêze³ w jej drzewie DOM. 
+\end{itemize}
+
+\section{Cel pracy}
+Celem pracy jest stworzenie i przetestowanie systemu potrafi¹cego znaleŸæ listy na stronach internetowych. Podstawowe za³o¿enia to:
+\begin{itemize}
+\item wykorzystanie algorytmów klasyfikacji,
+\item wykonanie podsystemu do rêcznego oznaczania list,
+\item u¿ycie przegl¹darki internetowej do pobierania danych opisuj¹cych elementy stron.
+\end{itemize}

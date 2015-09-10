@@ -1,0 +1,22 @@
+\contentsline {chapter}{\numberline {1\relax .\kern .5em }Wst\k ep}{3}
+\contentsline {section}{\numberline {1.1\relax .\kern .5em }Definicje u\.zywanych termin\'ow}{4}
+\contentsline {section}{\numberline {1.2\relax .\kern .5em }Cel pracy}{4}
+\contentsline {chapter}{\numberline {2\relax .\kern .5em }Zagadnienie klasyfikacji}{5}
+\contentsline {section}{\numberline {2.1\relax .\kern .5em }Naiwny Klasyfikator Bayesa}{6}
+\contentsline {section}{\numberline {2.2\relax .\kern .5em }Klasyfikator SVM}{8}
+\contentsline {section}{\numberline {2.3\relax .\kern .5em }Kryteria oceny}{9}
+\contentsline {chapter}{\numberline {3\relax .\kern .5em }Budowa stron internetowych}{12}
+\contentsline {section}{\numberline {3.1\relax .\kern .5em }Przyk\IeC {\l }ady list}{15}
+\contentsline {chapter}{\numberline {4\relax .\kern .5em }Architektura systemu}{17}
+\contentsline {section}{\numberline {4.1\relax .\kern .5em }Rozszerzenie przegl\k adarki internetowej}{18}
+\contentsline {section}{\numberline {4.2\relax .\kern .5em }Serwer}{20}
+\contentsline {chapter}{\numberline {5\relax .\kern .5em }Implementacja}{23}
+\contentsline {section}{\numberline {5.1\relax .\kern .5em }Klasyfikacja}{23}
+\contentsline {section}{\numberline {5.2\relax .\kern .5em }Atrybuty}{25}
+\contentsline {section}{\numberline {5.3\relax .\kern .5em }Zdalne wywo\IeC {\l }ywanie procedur}{27}
+\contentsline {section}{\numberline {5.4\relax .\kern .5em }Przechowywanie testowego zbioru stron}{29}
+\contentsline {chapter}{\numberline {6\relax .\kern .5em }Eksperymenty}{31}
+\contentsline {section}{\numberline {6.1\relax .\kern .5em }Dob\'or atrybut\'ow}{31}
+\contentsline {section}{\numberline {6.2\relax .\kern .5em }Wyniki}{39}
+\contentsline {chapter}{\numberline {7\relax .\kern .5em }Podsumowanie}{42}
+\contentsline {chapter}{Bibliografia}{43}

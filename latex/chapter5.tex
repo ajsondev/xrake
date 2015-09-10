@@ -1,0 +1,62 @@
+\chapter{Implementacja}
+W poni¿szym rozdziale prezentujê szegó³y implementacji klasyfikatorów i dok³adnie opisujê atrybuty, których przydatnoœæ bêdê weryfikowa³ w rozdziale \ref{cha:eksperymenty}. Przedstawiam tak¿e systemy zdalnego wywo³ywania procedur oraz  przechowywania testowego zbioru stron, poniewa¿ s¹ one zrealizowane w ciekawy sposób. 
+
+\section{Klasyfikacja}
+Strony sk³adaj¹ siê z wêz³ów drzewa DOM. Problem klasyfikacji list mo¿na sformu³owaæ jako przypisanie ka¿dego wêz³a do jednej z dwóch klasy. Do pierwszej gdy reprezentuje, wraz ze wszystkimi elementami potomnymi, jak¹œ listê, b¹dŸ do drugiej w przeciwnym wypadku. Jest to zatem klasyfikacja binarna.
+
+Klasyfikatory zosta³y napisane w jêzyku C++, s¹ one umieszczone w czêœci serwerowej. Kod SVM pochodzi z biblioteki dlib \cite{dlib}, implementacja oparta jest na algorytmie \textit{Sequential Minimal Optimization}. Jest on parametryzowany przy pomocy wartoœci C i $\gamma$, które nale¿y dobraæ eksperymentalnie. Wydruk \ref{wyd:svm_train} przedstawia procedurê ich poszukiwania. Zastosowa³em metodê siatki 30 na 30 punktów w skali logarytmicznej dla zakresów C od 0.001 do 100000 i $\gamma$ od 0.000001 do 100. Kod Naiwnego Klasyfikatora Bayesa zosta³ oparty na implementacji zamieszczonej w serwisie GitHub \cite{bayes_imp}, stosuje on rozk³ad Gaussa przy przetwarzaniu atrybutów.
+\begin{framed}
+\lstinputlisting[language=C++, basicstyle=\linespread{1}\small]{code/svm_train.cpp}
+\captionof{lstlisting}{Dobór parametrów klasyfikatora SVM przy u¿yciu biblioteki Dlib.}
+\label{wyd:svm_train}
+\end{framed}
+
+\section{Atrybuty}
+Do klasyfikacji niezbêdna by³a implementacja cech, którymi mo¿na by³oby opisaæ próbki. Pos³uguj¹c siê w³asnym wyczuciem, okreœli³em nastêpuj¹ce atrybuty:
+\begin{itemize}
+\item rozmiar i po³o¿enie,
+\item rozk³ad koloru tekstu,
+\item rozk³ad wielkoœci tekstu,
+\item wewnêtrzne podobieñstwo struktury (pq-Gram),
+\item œrednia liczba s³ów wœród elementów potomnych,
+\item minimalna wariancja rozmiaru i po³o¿enia.
+\end{itemize}
+
+Implementacja atrybutów zosta³a wykonana w jêzyku JavaScript, znajduje siê ona w czêœci rozszerzenia przegl¹darki.
+
+Aby okreœliæ rozmiar i po³o¿enie ka¿demu elementowi strony przypisano okalaj¹cy go prostok¹t i pobrano jego wspó³rzêdne oraz wielkoœæ podzielone przez wielkoœæ strony. Taka normalizacja zosta³a przeprowadzona, aby zminimalizowaæ wp³yw rozdzielczoœci ekranu na wyniki. Motywacj¹ dla tego atrybutu by³o za³o¿enie, ¿e listy bêd¹ znajdowaæ siê w typowych miejscach na stronie, przyk³adowo najczêœciej w jej œrodku.
+
+Rozk³ad koloru tekstu ma za zadzanie pokazaæ czy listy maj¹ tendencjê do zawierania jaœniejszych, b¹dŸ ciemniejszych kolorów ni¿ reszta elementów. Aby go uzyskaæ sumowane s¹ wszystkie piksele z jakich sk³ada siê tekst zawarty, niekoniecznie bezpoœrednio, w danym elemencie. Ze wzglêdów praktycznych brana jest pod uwagê wartoœæ koloru w skali szaroœci, czyli œrednia arytmetyczna z jego sk³adowych r, g, b. Wydruk \ref{wyd:text_pixels} prezentuje wykorzystan¹ procedurê zliczania pikseli tekstu. Jest ona bardziej skomplikowana ni¿ zliczanie liter, ale mo¿e zostaæ rozszerzona o obs³ugê rysunków. Implementuj¹c j¹, chcia³em pokazaæ du¿e mo¿liwoœci jêzyka JavaScript.
+\newpage
+\begin{framed}
+\lstinputlisting[language=JavaScript, basicstyle=\linespread{1}\small]{code/text_pixels.js}
+\captionof{lstlisting}{Zliczanie pikseli tekstu w jêzyku JavaScript.}
+\label{wyd:text_pixels}
+\end{framed}
+
+Ka¿demu elementowi zosta³ równie¿ przypisany rozk³ad rozmiaru czcionki w przeliczeniu na liczbê znaków napisanych tym rozmiarem. Tekst w elementach potomnych by³ uwzglêdniany.
+
+Do okreœlenia wewnêtrznego podobieñstwa struktury zosta³a u¿yta miara pq-Gram opisana w \cite{pqgram_paper}. Jest to odpowiednik tekstowej odleg³oœci edycyjnej dla struktur drzewiastych. W implementacji wykorzysta³em bibliotekê \cite{pqgram_impl}. Wartoœæ atrybutu pq-Gram dla elementu zosta³a okreœlona jako œrednia arytmetyczna sumy miary podobieñstwa pq-Gram dla ka¿dej pary s¹siaduj¹cych, bezpoœrednich potomków elementu (jego dzieci).
+
+Zaimplementowanie obliczania œredniej liczby s³ów wœród bezpoœrednich elementów potomnych (dzieci) obiektu wynika z przypuszczenia, ¿e listy powinny zawieraæ kilka s³ów na ka¿dy element. Liczba s³ów by³a wyliczana z uwglêdnieniem elementów potomnych.
+
+Minimalna wariancja rozmiaru i po³o¿enia zale¿y od czterech wartoœci: pionowego i poziomego po³o¿enia oraz wysokoœci i szerokoœci. Liczona jest ich wariancja wsród dzieci wêz³a, a nastêpnie brana pod uwagê najmniejsza wartoœæ. Elementy listy prawie zawsze maj¹ jakiœ wspólny uk³ad na stronie, przyk³adowo, s¹ ustawione jeden pod drugim lub s¹ podobnych rozmiarów. Pozytywn¹ w³asnoœci¹ tego atrybutu jest jego du¿a niezale¿noœæ od struktury DOM, zak³ada on tylko, ¿e elementy listy maj¹ wspólny korzeñ. Ten atrybut powinien dobrze siê uzupe³niaæ z atrybutem pq-Gram, który bada wy³¹cznie strukturê DOM.
+
+\section{Zdalne wywo³ywanie procedur}
+Aby móc po³¹czyæ generowanie atrybutów w przegl¹darce internetowej oraz implementacjê klasyfikatorów w formie serwera potrzebny by³ pomost w postaci RPC. Do tego celu wykorzsta³em protokó³ WebSockets oraz format JSON. Powodem by³a ich natywna obs³uga w przegl¹darce.
+\begin{framed}
+\lstinputlisting[language=C++, basicstyle=\linespread{1}\small]{code/rpc.cpp}
+\captionof{lstlisting}{Kod zdalnego wywo³ania procedury na przyk³adzie pobrania atrybutu pq-Gram.}
+\label{wyd:rpc}
+\end{framed}
+Na wydruku \ref{wyd:rpc} zamieœci³em fragment implementacji RPC. Klasa \textit{RemoteProcedureCall} opakowuje serializacjê i deserializacjê zdalnego wywo³ania. Ka¿da procedura posiada nazwê oraz identyfikator strony, do której jest kierowana. Funkcje globalne, takie jak otwarcie nowej strony, posiadaj¹ specjalny identyfikator. Klasa \textit{RPCMachine} zawiera definicje wszystkich zdalnych procedur w formie funkcji sk³adowych. Pod koniec prac nad serwerem, w celu zwiêkszenia wydajnoœci, zosta³a dodana zdalna procedura, pobieraj¹ca w jednym wywo³aniu atrybuty wszystkich elementów strony.
+
+\section{Przechowywanie testowego zbioru stron}
+\label{sec:Warc}
+Najbardziej popularne witryny, odwiedzane przez miliony osób, budowane w celach komercyjnych, zawieraj¹ szybko zmieniaj¹ce siê treœci. Nie jest mo¿liwe pobieranie ich za ka¿dym razem, gdy potrzeba próbek w kolejnej iteracji algorytmów klasyfikuj¹cych poniewa¿ otrzymalibyœmy, dla tej samej strony, ró¿ni¹ce siê od siebie dane. Nale¿y zatem zbudowaæ podsystem odpowiedzialny za przechowywanie egzemplarzy stron lokalnie. Takie zadanie w prezentowanym systemie pe³ni zarz¹dca archiwów Warc wraz z programem WebArchivePlayer \cite{webarchiveplayer}. 
+
+Najpierw strony WWW zosta³y zapisane przy pomocy us³ugi internetowej WebRecorder.io \cite{webrecorder} do formatu {Web ARChive} (w skrócie Warc), opisanego standardem {ISO 28500:2009}. Zosta³ on zaprojektowany do tego, aby jak najwierniej i najefektywniej przechowywaæ ka¿dy typ danych przesy³any protoko³em HTTP. Nadaje siê on tak¿e do zastosowañ profesjonalych, jest u¿ywany przez crawler Heritrix, napisany na potrzeby cyfrowej biblioteki {Internet Archive}.
+
+Nastêpnie, w celu odtworzenia stron, uruchamiany jest program WebArchivePlayer \cite{webarchiveplayer}, który serwuje je poprzez lokalny serwer HTTP. Z perspektywy przegl¹darki za³adowanie takiej strony nie ró¿ni siê od wczytania jej z internetu.
+
+Niestety praktyka pokaza³a, i¿ powy¿sze programy nie radz¹ sobie perfekcyjnie z dynamicznie ³adowanymi treœciami. Zdolnoœæ do ponownego dopasowania oznaczonych wczesniej 250 elementów  ze zbioru 16 popularnych w polsce witryn wynosi oko³o 88\%. Równie¿ wydajnoœæ lokalnego serwera programu WebArchivePlayer \cite{webarchiveplayer} nie jest zbyt wysoka. Mo¿e byæ to spowodowane u¿yciem w implemetacji jêzyka Python, który w pewnych zastosowaniach jest bardzo ma³o wydajny. Dla wspomnianego wczesniej zbioru 250 próbek sumaryczny czas ich wczytywania wynosi 6 minut. Ostatni¹, ale najbardziej dotkliw¹, wad¹ s¹ okresowe b³êdy w odtwarzaniu strony. Czasem strona wygl¹da zupe³nie inaczej ni¿ powinna, gdy¿ nie zosta³y za³adowane kluczowe zasoby takie jak plik z arkuszami stylów. ród³o tego problemu nie zosta³o zidentyfikowane, ale b³êdy tego typu pojawiaj¹ siê doœæ rzadko, mniej wiêcej 1 raz na 90 ³adowañ.

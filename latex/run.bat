@@ -1,0 +1,1 @@
+"D:\MiKTeX 2.9\miktex\bin\pdflatex.exe" main.tex

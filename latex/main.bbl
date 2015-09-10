@@ -1,0 +1,91 @@
+\begin{thebibliography}{10}
+
+\bibitem{Bloomberg}
+Lu~Wang, Whitney Kisling, Eric Lam.
+\newblock Fake post erasing 136 billion shows markets need humans.
+\newblock
+  \url{http://www.bloomberg.com/news/articles/2013-04-23/fake-report-erasing-136-billion-shows-market-s-fragility}.
+\newblock Data dostêpu: 13.08.2015.
+
+\bibitem{sjpPWN}
+S³ownik jêzyka polskiego {PWN}.
+\newblock \url{http://sjp.pwn.pl}.
+\newblock Data dostêpu: 15.07.2015.
+
+\bibitem{DataMiningConceptsTechniques}
+Jiawei Han, Micheline Kamber, Jian Pei.
+\newblock {\em Data Mining: Concepts and Techniques}.
+\newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, wydanie
+  trzecie, 2011.
+
+\bibitem{Mozilla_Tilt}
+{Mozilla Tilt}: Visualize your web page in 3d.
+\newblock
+  \url{https://hacks.mozilla.org/2011/07/tilt-visualize-your-web-page-in-3d/}.
+\newblock Data dostêpu: 06.09.2015.
+
+\bibitem{MichelangeloVisual}
+Miloš Kovaeevia, Michelangelo Diligenti, Marco Gori, Marco Maggini, Veljko
+  Milutinovia.
+\newblock Web page classification using visual information.
+\newblock {\em Proceedings of the IEEE International Conference on Data Mining
+  (ICDM)}, strony 250--257, 2002.
+
+\bibitem{ChromeMessagePassing}
+Chrome extensions message passing.
+\newblock \url{https://developer.chrome.com/extensions/messaging}.
+\newblock Data dostêpu: 05.08.2015.
+
+\bibitem{ChromeExeciteScript}
+Chrome extensions {Content Scripts} programmatic injection.
+\newblock \url{https://developer.chrome.com/extensions/content_scripts#pi}.
+\newblock Data dostêpu: 05.08.2015.
+
+\bibitem{WebSocketsProtocol}
+{WebSockets} protocol.
+\newblock \url{https://www.websocket.org/aboutwebsocket.html}.
+\newblock Data dostêpu: 05.08.2015.
+
+\bibitem{LibPOCO}
+{POCO C++} libraries.
+\newblock \url{http://pocoproject.org/index.html}.
+\newblock Data dostêpu: 05.08.2015.
+
+\bibitem{dlib}
+Biblioteka {Dlib}.
+\newblock \url{http://dlib.net/}.
+\newblock Data dostêpu: 06.09.2015.
+
+\bibitem{bayes_imp}
+Implementacja {Naiwnego Klasyfikatora Bayesa}.
+\newblock \url{https://github.com/timnugent/naive-bayes}.
+\newblock Data dostêpu: 06.09.2015.
+
+\bibitem{pqgram_paper}
+Nikolaus Augsten, Michael B\"{o}hlen, Johann Gamper.
+\newblock Approximate matching of hierarchical data using pq-grams.
+\newblock {\em Proceedings of the 31st International Conference on Very Large
+  Data Bases}, VLDB '05, strony 301--312. VLDB Endowment, 2005.
+
+\bibitem{pqgram_impl}
+{JQGram tree edit distance approximation, Javascript port of PyGram with some
+  additional functionality}.
+\newblock \url{https://github.com/hoonto/jqgram}.
+\newblock Data dostêpu: 16.08.2015.
+
+\bibitem{webarchiveplayer}
+{WebArchivePlayer}.
+\newblock \url{https://github.com/ikreymer/webarchiveplayer}.
+\newblock Data dostêpu: 16.08.2015.
+
+\bibitem{webrecorder}
+{WebRecorder}.
+\newblock \url{https://webrecorder.io/}.
+\newblock Data dostêpu: 16.08.2015.
+
+\bibitem{AlexaRank}
+Ranking popularnoœci stron {Alexa}.
+\newblock \url{http://www.alexa.com/topsites/countries/PL}.
+\newblock Data dostêpu: 20.06.2015.
+
+\end{thebibliography}

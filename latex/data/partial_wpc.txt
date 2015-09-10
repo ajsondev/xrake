@@ -1,0 +1,166 @@
+!!!!!!----- SVM ----!!!!!
+doing cross validation
+gamma: 1e-006    C: 100000
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.811355 czulosc: 0.714286 precyzja: 0.807797 Fb: 0.727834
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.799177 czulosc: 0.677701 precyzja: 0.784394 Fb: 0.689553
+gamma: 1e-006    C: 1000
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.800366 czulosc: 0.671086 precyzja: 0.812987 Fb: 0.694583
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.786831 czulosc: 0.64832 precyzja: 0.797264 Fb: 0.66518
+gamma: 1e-006    C: 10
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.659341 czulosc: 0.204481 precyzja: 0.868234 Fb: 0.241375
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.556379 czulosc: 0.228733 precyzja: 0.863228 Fb: 0.185828
+gamma: 1e-006    C: 0.1
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.589744 czulosc: 0 precyzja: 1 Fb: 0
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.566872 czulosc: 0.1 precyzja: 0.939918 Fb: 0.0765251
+gamma: 1e-006    C: 0.001
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.587912 czulosc: 0 precyzja: 1 Fb: 0
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.54465 czulosc: 0.2 precyzja: 0.878807 Fb: 0.15144
+gamma: 0.0001    C: 100000
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.846154 czulosc: 0.909613 precyzja: 0.764646 Fb: 0.874681
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.831893 czulosc: 0.86393 precyzja: 0.768499 Fb: 0.840355
+gamma: 0.0001    C: 1000
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.857143 czulosc: 0.904374 precyzja: 0.779093 Fb: 0.876145
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.833128 czulosc: 0.828387 precyzja: 0.79106 Fb: 0.815601
+gamma: 0.0001    C: 10
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.824176 czulosc: 0.76744 precyzja: 0.795666 Fb: 0.772661
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.768724 czulosc: 0.591717 precyzja: 0.790762 Fb: 0.614385
+gamma: 0.0001    C: 0.1
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.661172 czulosc: 0.213263 precyzja: 0.857143 Fb: 0.250955
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.592593 czulosc: 0 precyzja: 1 Fb: 0
+gamma: 0.0001    C: 0.001
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.587912 czulosc: 0 precyzja: 1 Fb: 0
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.592593 czulosc: 0 precyzja: 1 Fb: 0
+gamma: 0.01    C: 100000
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.857143 czulosc: 0.946824 precyzja: 0.763639 Fb: 0.903163
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.785391 czulosc: 0.748833 precyzja: 0.745249 Fb: 0.741333
+gamma: 0.01    C: 1000
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.855311 czulosc: 0.946424 precyzja: 0.761323 Fb: 0.902155
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.789712 czulosc: 0.751895 precyzja: 0.736688 Fb: 0.744474
+gamma: 0.01    C: 10
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.855311 czulosc: 0.925214 precyzja: 0.770303 Fb: 0.889272
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.833539 czulosc: 0.855399 precyzja: 0.768483 Fb: 0.832455
+gamma: 0.01    C: 0.1
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.840659 czulosc: 0.887507 precyzja: 0.767575 Fb: 0.858055
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.808436 czulosc: 0.728735 precyzja: 0.79999 Fb: 0.725289
+gamma: 0.01    C: 0.001
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.589744 czulosc: 0 precyzja: 1 Fb: 0
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.565021 czulosc: 0.1 precyzja: 0.939918 Fb: 0.0765471
+gamma: 1    C: 100000
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.833333 czulosc: 0.902086 precyzja: 0.746429 Fb: 0.865929
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.806584 czulosc: 0.801692 precyzja: 0.748382 Fb: 0.785798
+gamma: 1    C: 1000
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.836996 czulosc: 0.895655 precyzja: 0.75633 Fb: 0.862728
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.821193 czulosc: 0.817288 precyzja: 0.769666 Fb: 0.80112
+gamma: 1    C: 10
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.818681 czulosc: 0.86396 precyzja: 0.74507 Fb: 0.834993
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.806173 czulosc: 0.810549 precyzja: 0.744486 Fb: 0.793063
+gamma: 1    C: 0.1
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.862637 czulosc: 0.991597 precyzja: 0.75311 Fb: 0.932484
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.693827 czulosc: 0.501007 precyzja: 0.802554 Fb: 0.461344
+gamma: 1    C: 0.001
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.589744 czulosc: 0 precyzja: 1 Fb: 0
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.588889 czulosc: 0 precyzja: 1 Fb: 0
+gamma: 100    C: 100000
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.838828 czulosc: 0.910748 precyzja: 0.752256 Fb: 0.873421
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.817695 czulosc: 0.884541 precyzja: 0.73432 Fb: 0.847165
+gamma: 100    C: 1000
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.81685 czulosc: 0.848978 precyzja: 0.742247 Fb: 0.825187
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.823663 czulosc: 0.892272 precyzja: 0.738889 Fb: 0.854879
+gamma: 100    C: 10
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.851648 czulosc: 0.937694 precyzja: 0.758185 Fb: 0.895151
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.818519 czulosc: 0.893985 precyzja: 0.727362 Fb: 0.852572
+gamma: 100    C: 0.1
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.82967 czulosc: 1 precyzja: 0.710608 Fb: 0.924314
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.67428 czulosc: 0.46985 precyzja: 0.824471 Fb: 0.42817
+gamma: 100    C: 0.001
+Cross validation, 2 groups, total 547 samples, metrics:
+Dokladnosc: 0.589744 czulosc: 0 precyzja: 1 Fb: 0
+Cross validation, 10 groups, total 547 samples, metrics:
+Dokladnosc: 0.58107 czulosc: 0.2 precyzja: 0.900459 Fb: 0.164435
+--------------------------
+
+Best measures 2 groups :
+Dokladnosc: 0.862637 czulosc: 0.991597 precyzja: 0.75311 Fb: 0.932484
+For gamma 1.000000 C 0.100000
+Best measures 10 groups :
+Dokladnosc: 0.823663 czulosc: 0.892272 precyzja: 0.738889 Fb: 0.854879
+For gamma 100.000000 C 1000.000000
+------- end k-fold ------------------
+----------new learn--------------
+Learn 125 + 1716, measures for 250 + 5000
+Measure for 5682 samples
+Dokladnosc: 0.955649 czulosc: 0.0755556 precyzja: 0.278689 Fb: 0.0884495
+----------new learn--------------
+Learn 125 + 125, measures for 250 + 5000
+Measure for 5682 samples
+Dokladnosc: 0.830517 czulosc: 0.875556 precyzja: 0.174028 Fb: 0.484744
+----------new learn--------------
+Learn 125 + 0, measures for 250 + 5000
+Measure for 5682 samples
+Dokladnosc: 0.0395987 czulosc: 1 precyzja: 0.0395987 Fb: 0.170921
+!!!!!!----- BAYES ----!!!!!
+Cross validation, 2 groups, total 467 samples, metrics:
+Dokladnosc: 0.858369 czulosc: 0.933083 precyzja: 0.804774 Fb: 0.90421
+-------
+Cross validation, 10 groups, total 467 samples, metrics:
+Dokladnosc: 0.677295 czulosc: 0.840889 precyzja: 0.695481 Fb: 0.778669
+----------new learn--------------
+Learn 125 + 1716, measures for 250 + 5000
+Measure for 5682 samples
+Dokladnosc: 0.960401 czulosc: 0 precyzja: 1 Fb: 0
+----------new learn--------------
+Learn 125 + 125, measures for 250 + 5000
+Measure for 5682 samples
+Dokladnosc: 0.939106 czulosc: 0.186667 precyzja: 0.204878 Fb: 0.190045
+----------new learn--------------
+Learn 125 + 0, measures for 250 + 5000
+Measure for 5682 samples
+Dokladnosc: 0.0395987 czulosc: 1 precyzja: 0.0395987 Fb: 0.170921

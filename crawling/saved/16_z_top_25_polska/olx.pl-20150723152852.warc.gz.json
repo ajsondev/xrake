@@ -1,0 +1,355 @@
+[
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "UL", 1 ],
+               [ "SECTION", 3 ],
+               [ "DIV", 0 ],
+               [ "SECTION", 6 ],
+               [ "DIV", 1 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI"
+            ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723152612/http://olx.pl/"
+   },
+   {
+      "data" : [],
+      "url" : "http://localhost:8090/replay/20150723152638/http://olx.pl/oferta/lozko-CID628-IDb0obN.html"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "TBODY", 0 ],
+               [ "TABLE", 2 ],
+               [ "DIV", 3 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "SECTION", 5 ],
+               [ "DIV", 3 ],
+               [ "DIV", 1 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR"
+            ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723152651/http://olx.pl/elektronika/telefony-komorkowe/radom/"
+   },
+   {
+      "data" : {
+         "skip" : true
+      },
+      "url" : "http://localhost:8090/replay/20150723152730/http://olx.pl/elektronika/telefony-komorkowe/radom/?search%5Bprivate_business%5D=private"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "TBODY", 1 ],
+               [ "TABLE", 1 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "SECTION", 4 ],
+               [ "DIV", 3 ],
+               [ "DIV", 1 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "TR", "TR", "TR", "TR", "TR" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "TBODY", 0 ],
+               [ "TABLE", 2 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "SECTION", 4 ],
+               [ "DIV", 3 ],
+               [ "DIV", 1 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR"
+            ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723152748/http://olx.pl/nieruchomosci/domy/radom/"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "TBODY", 1 ],
+               [ "TABLE", 1 ],
+               [ "DIV", 3 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "SECTION", 4 ],
+               [ "DIV", 3 ],
+               [ "DIV", 1 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "TR", "TR", "TR", "TR", "TR" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "TBODY", 0 ],
+               [ "TABLE", 2 ],
+               [ "DIV", 3 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "SECTION", 4 ],
+               [ "DIV", 3 ],
+               [ "DIV", 1 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR",
+               "TR"
+            ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723152812/http://olx.pl/dom-ogrod/ogrod/radom/"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "UL", 2 ],
+               [ "DIV", 3 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "SECTION", 4 ],
+               [ "DIV", 3 ],
+               [ "DIV", 1 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI", "LI", "LI" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 5 ],
+               [ "DIV", 3 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "SECTION", 4 ],
+               [ "DIV", 3 ],
+               [ "DIV", 1 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI"
+            ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723152828/http://olx.pl/dom-ogrod/ogrod/radom/?view=galleryWide"
+   }
+]

@@ -1,0 +1,485 @@
+[
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "DIV", 0 ],
+               [ "SECTION", 2 ],
+               [ "MAIN", 2 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "DIV", "DIV", "DIV" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723155032/http://otomoto.pl/"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "DIV", 1 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 3 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "ARTICLE", "ARTICLE", "ARTICLE", "DIV" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "DIV", 2 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 3 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE"
+            ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723155049/http://otomoto.pl/maszyny-rolnicze/"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "DIV", 1 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 3 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "ARTICLE", "ARTICLE", "ARTICLE", "DIV" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "DIV", 2 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 3 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE"
+            ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723155110/http://otomoto.pl/osobowe/q-audi/"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "UL", 4 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 3 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI"
+            ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 2 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 3 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723155127/http://otomoto.pl/osobowe/q-audi/?view=galleryWide"
+   },
+   {
+      "data" : {
+		"skip" : true
+      },
+      "url" : "http://localhost:8090/replay/20150723155206/http://otomoto.pl/oferta/volvo-v50-mozliwa-zamiana-za-audi-lub-fiat-bravo-ID6y8q5H.html#"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "DIV", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 5 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 2 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "DIV", "DIV", "DIV" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723155228/http://otomoto.pl/oferta/volvo-v50-1-6-100km-klimatronic-alu-wielofunkcyjna-kierownica-ID6y5N6t.html"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "UL", 2 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 3 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI", "LI" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 4 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 3 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI",
+               "LI"
+            ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 6 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 3 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723155244/http://otomoto.pl/osobowe/q-chevrolet/?view=galleryWide"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "DIV", 1 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 3 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "ARTICLE", "ARTICLE", "ARTICLE", "DIV" ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "DIV", 2 ],
+               [ "DIV", 2 ],
+               [ "DIV", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 3 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE",
+               "ARTICLE"
+            ],
+            "type" : "list"
+         },
+         {
+            "chain" : [
+               [ "UL", 0 ],
+               [ "DIV", 0 ],
+               [ "DIV", 1 ],
+               [ "DIV", 6 ],
+               [ "DIV", 1 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 3 ],
+               [ "DIV", 3 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "LI", "LI" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723155259/http://otomoto.pl/osobowe/q-chevrolet/?view=list"
+   },
+   {
+      "data" : [
+         {
+            "chain" : [
+               [ "DIV", 1 ],
+               [ "DIV", 0 ],
+               [ "DIV", 5 ],
+               [ "DIV", 1 ],
+               [ "SECTION", 2 ],
+               [ "DIV", 2 ],
+               [ "BODY", 1 ],
+               [ "HTML", 0 ]
+            ],
+            "children" : [ "DIV", "DIV", "DIV", "DIV" ],
+            "type" : "list"
+         }
+      ],
+      "url" : "http://localhost:8090/replay/20150723155320/http://otomoto.pl/oferta/chevrolet-spark-1-2-16v-salon-polska-1-wlasciciel-ID4pdjJK.html#20614538b8;promoted"
+   }
+]
