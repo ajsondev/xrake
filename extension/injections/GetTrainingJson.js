@@ -50,7 +50,7 @@ function GetTrainingJson() {
 			reportResult();
 		} else if(key == "x") {
 			currentSelection = currentSelection && currentSelection.parentNode;
-			SetMarkingRect(currentSelection);
+			SetMxarkingRect(currentSelection);
 		} else if(key == "z") {
 			var node = selectedNodes.pop();
 			if (node) {

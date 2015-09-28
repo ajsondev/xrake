@@ -135,8 +135,8 @@ void SVM_train()
   ComputedMeasures best_cm10, best_cm2;
 
   matrix<double> params = cartesian_product( 
-    logspace(log10(1e-6), log10(100), 10),  // gamma parameter
-    logspace(log10(100000), log10(1e-3), 10) // SVM C parameter
+    logspace(log10(1e-6), log10(100), 30),  // gamma parameter
+    logspace(log10(100000), log10(1e-3), 30) // SVM C parameter
   );
 
   for (long col = 0; col < params.nc(); ++col)

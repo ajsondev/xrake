@@ -26,7 +26,7 @@ function countWords(str) {
 }
 
 function GetWordCountPerChildArithmeticMean(rootNode) {
-  debugger;
+  //debugger;
   var word_sum = 0;
   var child_count = 0;
 
@@ -47,7 +47,7 @@ function GetWordCountPerChildArithmeticMean(rootNode) {
 }
 
 function GetWordCountPerChildGeometricMean(rootNode) {
-  debugger;
+  //debugger;
   var word_product = 1;
   var child_count = 0;
   var nonzero_child_count = 0;

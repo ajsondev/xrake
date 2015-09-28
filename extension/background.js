@@ -91,6 +91,11 @@ chrome.runtime.onMessage.addListener(
 			});
 	  	});
 	  	return;
+	  } else if(request.action == "FilterToCommonRoots") {
+	  	chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+			chrome.tabs.executeScript(tabs[0].id, { "code" : "MarkCommonRoots();" });
+	  	});
+	  	return;
 	  }
 
 	  // Non-local actions.
